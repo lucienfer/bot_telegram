@@ -1,0 +1,17 @@
+[package]
+name = "bot_telegram"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dotenv = "0.15.0"
+teloxide = { version = "0.13", features = ["macros"] }
+teloxide-macros = { version = "0.8", optional = true }
+tokio-macros = { version = "0.2.0-alpha.6" }
+tokio = { version = "1.41.0", features = ["rt-multi-thread", "macros"] }
+log = "0.4"
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres"] }
+starknet = { git = "https://github.com/xJonathanLEI/starknet-rs" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
